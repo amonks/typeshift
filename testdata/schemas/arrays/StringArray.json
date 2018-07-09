@@ -1,0 +1,12 @@
+{
+  "title": "StringArray",
+  "type": "array",
+  "items": {
+    "title": "",
+    "type": "string"
+  },
+  "uniqueItems": false
+}
+
+
+

@@ -1,0 +1,17 @@
+{
+  "title": "NestedArray",
+  "type": "array",
+  "items": {
+    "title": "",
+    "type": "array",
+    "items": {
+      "title": "",
+      "type": "integer"
+    },
+    "uniqueItems": false
+  },
+  "uniqueItems": false
+}
+
+
+

@@ -1,0 +1,15 @@
+{
+  "anyOf": [
+    {
+      "title": "PublicNullableInt64",
+      "type": "integer"
+    },
+    {
+      "title": "",
+      "type": "null"
+    }
+  ]
+}
+
+
+

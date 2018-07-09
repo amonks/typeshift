@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+ex() {
+    echo "error"
+    exit 1
+}
+
+check_git() {
+    echo "checking git status"
+    if [ -z "$(git status --porcelain)" ]; then
+        echo "clean"
+    else 
+        echo "dirty"
+        ex
+    fi
+}
+
+check_git
+
+declare -a packages=("arrays" "nullables" "objects" "scalars")
+for i in "${packages[@]}" ; do
+    echo "running $i"
+    ../../../../bin/typeshift -format ts -output testdata/types/$i -path testpackages/$i || ex
+    ../../../../bin/typeshift -format json -output testdata/schemas/$i -path testpackages/$i || ex
+done
+
+check_git

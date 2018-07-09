@@ -1,0 +1,15 @@
+{
+  "anyOf": [
+    {
+      "title": "PublicNullableString",
+      "type": "string"
+    },
+    {
+      "title": "",
+      "type": "null"
+    }
+  ]
+}
+
+
+

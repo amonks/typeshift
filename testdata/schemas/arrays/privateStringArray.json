@@ -1,0 +1,12 @@
+{
+  "title": "privateStringArray",
+  "type": "array",
+  "items": {
+    "title": "",
+    "type": "string"
+  },
+  "uniqueItems": false
+}
+
+
+

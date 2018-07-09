@@ -1,0 +1,70 @@
+{
+  "title": "privateObject",
+  "description": "privateObject's docstring",
+  "type": "",
+  "properties": {
+    "DocStringField": {
+      "title": "DocStringField",
+      "description": "DocStringField is a cool field",
+      "type": "string"
+    },
+    "NullableStringField": {
+      "anyOf": [
+        {
+          "title": "NullableStringField",
+          "type": "string"
+        },
+        {
+          "title": "",
+          "type": "null"
+        }
+      ]
+    },
+    "OmittedStringField": {
+      "title": "OmittedStringField",
+      "type": "string"
+    },
+    "RenamedStringField": {
+      "title": "RenamedStringField",
+      "type": "string"
+    },
+    "StructField": {
+      "title": "StructField",
+      "type": "",
+      "properties": {
+        "Int": {
+          "title": "Int",
+          "type": "integer"
+        },
+        "String": {
+          "title": "String",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Int",
+        "String"
+      ]
+    },
+    "WeirdlyOmittedStringField": {
+      "title": "WeirdlyOmittedStringField",
+      "type": "string"
+    },
+    "privateStringField": {
+      "title": "privateStringField",
+      "type": "string"
+    }
+  },
+  "required": [
+    "DocStringField",
+    "privateStringField",
+    "NullableStringField",
+    "RenamedStringField",
+    "OmittedStringField",
+    "WeirdlyOmittedStringField",
+    "StructField"
+  ]
+}
+
+
+

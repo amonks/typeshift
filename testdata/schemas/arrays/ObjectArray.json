@@ -1,0 +1,26 @@
+{
+  "title": "ObjectArray",
+  "type": "array",
+  "items": {
+    "title": "",
+    "type": "",
+    "properties": {
+      "Int": {
+        "title": "Int",
+        "type": "integer"
+      },
+      "Str": {
+        "title": "Str",
+        "type": "string"
+      }
+    },
+    "required": [
+      "Int",
+      "Str"
+    ]
+  },
+  "uniqueItems": false
+}
+
+
+
