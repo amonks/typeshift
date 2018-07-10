@@ -12,6 +12,7 @@ type JsonTag struct {
 }
 
 func ReadJsonTag(t string) JsonTag {
+	t = strings.Replace(t, "`", "", 2)
 	var tag = reflect.StructTag(t)
 	jsontag := tag.Get("json")
 	if jsontag == "" {
