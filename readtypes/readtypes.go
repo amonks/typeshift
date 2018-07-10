@@ -13,8 +13,14 @@ import (
 	"strings"
 
 	"github.com/amonks/typeshift/jsonschema"
-	"github.com/amonks/typeshift/util"
 )
+
+func nonEmptyStringPtrOr(s *string, alt string) string {
+	if s == nil || *s == "" {
+		return alt
+	}
+	return *s
+}
 
 func docToDescription(docs ...*ast.CommentGroup) string {
 	out := ""
@@ -35,10 +41,10 @@ func structExprToSchema(name, description string, structType ast.StructType) (*j
 		for _, id := range f.Names {
 			name = id.Name
 		}
-		var jsonTag = util.JsonTag{}
+		var jsonTag = JsonTag{}
 		if f.Tag != nil {
-			jsonTag = util.ReadJsonTag(f.Tag.Value)
-			name = util.NonEmptyStringPtrOr(jsonTag.TSName, name)
+			jsonTag = ReadJsonTag(f.Tag.Value)
+			name = nonEmptyStringPtrOr(jsonTag.TSName, name)
 			if jsonTag.Skip {
 				continue
 			}
