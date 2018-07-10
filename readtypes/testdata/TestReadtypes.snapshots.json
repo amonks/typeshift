@@ -1,0 +1,263 @@
+[
+  {
+    "Name": "arrays",
+    "Values": [
+      {
+        "NestedArray": {
+          "items": {
+            "items": {
+              "title": "",
+              "type": "integer"
+            },
+            "title": "",
+            "type": "array",
+            "uniqueItems": false
+          },
+          "title": "NestedArray",
+          "type": "array",
+          "uniqueItems": false
+        },
+        "ObjectArray": {
+          "items": {
+            "properties": {
+              "Int": {
+                "title": "Int",
+                "type": "integer"
+              },
+              "Str": {
+                "title": "Str",
+                "type": "string"
+              }
+            },
+            "required": [
+              "Int",
+              "Str"
+            ],
+            "title": "",
+            "type": ""
+          },
+          "title": "ObjectArray",
+          "type": "array",
+          "uniqueItems": false
+        },
+        "StringArray": {
+          "items": {
+            "title": "",
+            "type": "string"
+          },
+          "title": "StringArray",
+          "type": "array",
+          "uniqueItems": false
+        },
+        "privateStringArray": {
+          "items": {
+            "title": "",
+            "type": "string"
+          },
+          "title": "privateStringArray",
+          "type": "array",
+          "uniqueItems": false
+        }
+      }
+    ]
+  },
+  {
+    "Name": "nullables",
+    "Values": [
+      {
+        "PublicNullableInt64": {
+          "anyOf": [
+            {
+              "title": "PublicNullableInt64",
+              "type": "integer"
+            },
+            {
+              "title": "",
+              "type": "null"
+            }
+          ]
+        },
+        "PublicNullableString": {
+          "anyOf": [
+            {
+              "title": "PublicNullableString",
+              "type": "string"
+            },
+            {
+              "title": "",
+              "type": "null"
+            }
+          ]
+        },
+        "privateNullableInt64": {
+          "anyOf": [
+            {
+              "title": "privateNullableInt64",
+              "type": "integer"
+            },
+            {
+              "title": "",
+              "type": "null"
+            }
+          ]
+        },
+        "privateNullableString": {
+          "anyOf": [
+            {
+              "title": "privateNullableString",
+              "type": "string"
+            },
+            {
+              "title": "",
+              "type": "null"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "Name": "objects",
+    "Values": [
+      {
+        "PublicObject": {
+          "description": "PublicObject is an object",
+          "properties": {
+            "DocStringField": {
+              "description": "DocStringField is a cool field",
+              "title": "DocStringField",
+              "type": "string"
+            },
+            "NullableStringField": {
+              "anyOf": [
+                {
+                  "title": "NullableStringField",
+                  "type": "string"
+                },
+                {
+                  "title": "",
+                  "type": "null"
+                }
+              ]
+            },
+            "StructField": {
+              "properties": {
+                "Int": {
+                  "title": "Int",
+                  "type": "integer"
+                },
+                "String": {
+                  "title": "String",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "Int",
+                "String"
+              ],
+              "title": "StructField",
+              "type": ""
+            },
+            "new_string_field_name": {
+              "title": "new_string_field_name",
+              "type": "string"
+            },
+            "privateStringField": {
+              "title": "privateStringField",
+              "type": "string"
+            }
+          },
+          "required": [
+            "DocStringField",
+            "privateStringField",
+            "NullableStringField",
+            "new_string_field_name",
+            "StructField"
+          ],
+          "title": "PublicObject",
+          "type": ""
+        },
+        "privateObject": {
+          "description": "privateObject's docstring",
+          "properties": {
+            "DocStringField": {
+              "description": "DocStringField is a cool field",
+              "title": "DocStringField",
+              "type": "string"
+            },
+            "NullableStringField": {
+              "anyOf": [
+                {
+                  "title": "NullableStringField",
+                  "type": "string"
+                },
+                {
+                  "title": "",
+                  "type": "null"
+                }
+              ]
+            },
+            "StructField": {
+              "properties": {
+                "Int": {
+                  "title": "Int",
+                  "type": "integer"
+                },
+                "String": {
+                  "title": "String",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "Int",
+                "String"
+              ],
+              "title": "StructField",
+              "type": ""
+            },
+            "new_string_field_name": {
+              "title": "new_string_field_name",
+              "type": "string"
+            },
+            "privateStringField": {
+              "title": "privateStringField",
+              "type": "string"
+            }
+          },
+          "required": [
+            "DocStringField",
+            "privateStringField",
+            "NullableStringField",
+            "new_string_field_name",
+            "StructField"
+          ],
+          "title": "privateObject",
+          "type": ""
+        }
+      }
+    ]
+  },
+  {
+    "Name": "scalars",
+    "Values": [
+      {
+        "PublicInt64": {
+          "title": "PublicInt64",
+          "type": "integer"
+        },
+        "PublicString": {
+          "title": "PublicString",
+          "type": "string"
+        },
+        "privateInt64": {
+          "title": "privateInt64",
+          "type": "integer"
+        },
+        "privateString": {
+          "title": "privateString",
+          "type": "string"
+        }
+      }
+    ]
+  }
+]
