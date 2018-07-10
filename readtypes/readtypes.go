@@ -41,11 +41,12 @@ func structExprToSchema(name, description string, structType ast.StructType) (*j
 		for _, id := range f.Names {
 			name = id.Name
 		}
-		var jsonTag = JsonTag{}
+
+		var jsontag = jsonTag{}
 		if f.Tag != nil {
-			jsonTag = ReadJsonTag(f.Tag.Value)
-			name = nonEmptyStringPtrOr(jsonTag.TSName, name)
-			if jsonTag.Skip {
+			jsontag = readJsonTag(f.Tag.Value)
+			name = nonEmptyStringPtrOr(jsontag.tsName, name)
+			if jsontag.skip {
 				continue
 			}
 		}
